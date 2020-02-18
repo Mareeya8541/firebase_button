@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "255308990039",
+    "firebase_url": "https://fir-demo-39b35.firebaseio.com",
+    "project_id": "fir-demo-39b35",
+    "storage_bucket": "fir-demo-39b35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255308990039:android:0f4bbfce7f2abe2cc8c512",
+        "android_client_info": {
+          "package_name": "com.mareeya.demofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255308990039-agitacaigfha9ihdh7stbrii61uoudhc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mareeya.demofirebase",
+            "certificate_hash": "00caf73eafdb688969e60c858c1317c114d647d9"
+          }
+        },
+        {
+          "client_id": "255308990039-obutv00jl7of26ecmakq1l4qf353bp9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMqEQDkPZ_uuhTRJabxP2vx_80pbxwtrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255308990039-obutv00jl7of26ecmakq1l4qf353bp9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
