@@ -1,3 +1,4 @@
+import 'package:demofirebase/authentication/loginpage.dart';
 import 'package:demofirebase/screen/home.dart';
 import 'package:flutter/material.dart';
 //import 'package:mareeya/screeen/home.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'test1',
       debugShowCheckedModeBanner: false,
       //home: Text('DATA'),
-      home:Home(),
+      home:LoginPage(),
       
     );
   }

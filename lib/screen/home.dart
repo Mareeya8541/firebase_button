@@ -329,7 +329,7 @@ class _HomeState extends State<Home> {
 
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/wo.jpeg')),
         gradient: RadialGradient(
           colors:[Colors.white,Colors.limeAccent],
           radius: 2.0//กระจายสี
