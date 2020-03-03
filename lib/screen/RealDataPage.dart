@@ -14,7 +14,7 @@ class _RealtimePageState extends State<RealtimePage> {
   
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
       
     );
   }

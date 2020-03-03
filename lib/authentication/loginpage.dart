@@ -90,6 +90,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+
   Widget buttonlogin(){
     return Container(
       width: 300.0,
@@ -100,6 +101,7 @@ class _LoginPageState extends State<LoginPage> {
         size: 30.0,
       ),
       label: Text('LOGIN'),
+      
       onPressed: (){
         var route = MaterialPageRoute(
             builder: (BuildContext context) => Home()

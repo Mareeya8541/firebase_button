@@ -54,6 +54,7 @@ class _HomeState extends State<Home> {
     map['sw1']=sw1Int;
     map['fan1']=fan1Int;
     map['air1']=air1Int;
+    map['namestr']=namestr;
 
     await databaseReference.set(map).then((response){
       print('Edit Success');
@@ -233,6 +234,10 @@ class _HomeState extends State<Home> {
                     value: air1Bool, 
                     onChanged:(bool value){
                       changair1Bool(value);
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>Home()))
+                      .then((value){
+                        
+                      });
                     },
                     ),
                   Text('On')

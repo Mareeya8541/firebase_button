@@ -25,6 +25,7 @@ class IotModel{
       map['sw1']=sw1;
       map['fan1']=fan1;
       map['air1']=air1;
+      map['namestr']=namestr;
 
 
       return map;
