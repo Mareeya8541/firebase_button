@@ -9,6 +9,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool emailBool = false,passBool = false;
+  String emailStr,passStl;
 
   final String titleString ="LoginPage";
   var textEditController = new TextEditingController();
@@ -21,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget showTaxt(){
-    return Text('Welcom To My Page',
+    return Text('Welcome To My Page',
     style: TextStyle(
       fontSize: 30.0,
       fontWeight:FontWeight.bold,

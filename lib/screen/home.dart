@@ -10,6 +10,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   bool modeBool = false, led1Bool=false,sw1Bool=false,fan1Bool=false,air1Bool=false;
   int modeInt=0, led1Int=0, sw1Int=0, fan1Int=0, air1Int=0;
+  String namestr="";
   IotModel iotModel;
 
   FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
@@ -36,8 +37,10 @@ class _HomeState extends State<Home> {
       sw1Int=iotModel.sw1;
       fan1Int=iotModel.fan1;
       air1Int=iotModel.air1;
+      namestr=iotModel.namestr;
       checkSwitch();
     });
+   
   }
 
   Future<void> editDatabase() async{//โยนค่าขึ้น firebase
@@ -99,7 +102,7 @@ class _HomeState extends State<Home> {
 
   Widget switchMode(){
     return Container(
-      width: 300,
+      width: 200,
       child: Card(
         color:Colors.purple.shade300,
         child: Container(
@@ -325,25 +328,41 @@ class _HomeState extends State<Home> {
       ],
     );
   }
+  Widget textShow(){
+    return Text(namestr,
+    style: TextStyle(
+      fontSize: 40.0,
+      fontWeight:FontWeight.bold,
+      color:Colors.pinkAccent
+    ),
+    );
+  }
 
 
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/wo.jpeg')),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Welcome  '+namestr),
+      ),
+      body: Container(
+        decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/wo.jpeg')),
         gradient: RadialGradient(
           colors:[Colors.white,Colors.limeAccent],
           radius: 2.0//กระจายสี
         )
       ),
-    child: Center(
-      child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
+      child: Center(
+        child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+        textShow(),Text('\n'),
         switchMode(),
         button(),
         button1(),
       ],
-    ),),
+      ),),
+      ),
+      
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class IotModel{
   int led1,mode,sw1,fan1,air1;
+  String namestr;
 
   IotModel(
     this.led1,this.mode,this.air1,this.fan1,this.sw1
@@ -13,6 +14,7 @@ class IotModel{
       sw1=map['sw1'];
       fan1=map['fan1'];
       air1=map['air1'];
+      namestr=map['namestr'];
       
     }
 
