@@ -145,7 +145,7 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Led1',
+              Text('Led',
               style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold
@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('SW1',
+              Text('Switch',
               style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold
@@ -211,7 +211,7 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Fan1',
+              Text('Fan',
               style: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
@@ -244,9 +244,9 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Air1',
+              Text('Air',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 16.0,
                 fontWeight: FontWeight.bold
               )
               ),
