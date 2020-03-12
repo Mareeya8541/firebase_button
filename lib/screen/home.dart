@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   bool modeBool = false, led1Bool=false,sw1Bool=false,fan1Bool=false,air1Bool=false;
   int modeInt=0, led1Int=0, sw1Int=0, fan1Int=0, air1Int=0;
-  String namestr="";
+  String namestr="",namewel="";
   IotModel iotModel;
 
   FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
@@ -38,6 +38,7 @@ class _HomeState extends State<Home> {
       fan1Int=iotModel.fan1;
       air1Int=iotModel.air1;
       namestr=iotModel.namestr;
+      namewel=iotModel.namewel;
       checkSwitch();
     });
    
@@ -55,6 +56,7 @@ class _HomeState extends State<Home> {
     map['fan1']=fan1Int;
     map['air1']=air1Int;
     map['namestr']=namestr;
+    map['namewel']=namewel;
 
     await databaseReference.set(map).then((response){
       print('Edit Success');
@@ -110,7 +112,11 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Mode'),
+              Text('Mode',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold
+              ),),
               Row(
                 children: <Widget>[
                   Text('Auto'),
@@ -139,7 +145,11 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Led1'),
+              Text('Led1',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold
+              ),),
               Row(
                 children: <Widget>[
                   Text('Off'),
@@ -163,12 +173,16 @@ class _HomeState extends State<Home> {
     return Container(
       width: 200,
       child: Card(
-        color:Colors.yellowAccent.shade200,
+        color:Colors.amber,
         child: Container(
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('SW1'),
+              Text('SW1',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold
+              ),),
               Row(
                 children: <Widget>[
                   Text('Off'),
@@ -192,12 +206,16 @@ class _HomeState extends State<Home> {
     return Container(
       width: 200,
       child: Card(
-        color:Colors.yellowAccent.shade200,
+        color:Colors.amber,
         child: Container(
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Fan1'),
+              Text('Fan1',
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),),
               Row(
                 children: <Widget>[
                   Text('Off'),
@@ -226,7 +244,12 @@ class _HomeState extends State<Home> {
           padding:EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              Text('Air1'),
+              Text('Air1',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold
+              )
+              ),
               Row(
                 children: <Widget>[
                   Text('Off'),
@@ -234,10 +257,6 @@ class _HomeState extends State<Home> {
                     value: air1Bool, 
                     onChanged:(bool value){
                       changair1Bool(value);
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>Home()))
-                      .then((value){
-                        
-                      });
                     },
                     ),
                   Text('On')
@@ -347,7 +366,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome  '+namestr),
+        title: Text(namewel),
       ),
       body: Container(
         decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/wo.jpeg')),

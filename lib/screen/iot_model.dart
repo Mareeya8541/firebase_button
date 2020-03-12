@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class IotModel{
   int led1,mode,sw1,fan1,air1;
-  String namestr;
+  String namestr,namewel;
 
   IotModel(
-    this.led1,this.mode,this.air1,this.fan1,this.sw1
+    this.led1,this.mode,this.air1,this.fan1,this.sw1,this.namestr,this.namewel
   );
 
     IotModel.formMap(Map<dynamic,dynamic>map){
@@ -15,6 +15,7 @@ class IotModel{
       fan1=map['fan1'];
       air1=map['air1'];
       namestr=map['namestr'];
+      namewel=map['namewel'];
       
     }
 
@@ -26,6 +27,7 @@ class IotModel{
       map['fan1']=fan1;
       map['air1']=air1;
       map['namestr']=namestr;
+      map['namewel']=namewel;
 
 
       return map;

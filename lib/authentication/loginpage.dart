@@ -100,7 +100,11 @@ class _LoginPageState extends State<LoginPage> {
         icon: Icon(Icons.people,
         size: 30.0,
       ),
-      label: Text('LOGIN'),
+      label: Text('LOGIN',
+      style: TextStyle(
+        fontSize: 16.0,
+        fontWeight: FontWeight.bold
+      ),),
       
       onPressed: (){
         var route = MaterialPageRoute(
